@@ -3,236 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cricket Queen Siya - Professional Updates</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
+<title>Cricket Queen Siya</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --primary-blue: #1e3a8a;
-    --purple-mix: #7e22ce;
-    --text-main: #0f172a;
-    --text-muted: #475569;
-    --white: #ffffff;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-main);
-    padding: 0;
-    /* BG: Upper 100% visible, Bottom 0% (White fade) */
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 100%), 
-                url('https://img.freepik.com/free-vector/elegant-hand-painted-pastel-pink-alcohol-ink-background_1048-19138.jpg?semt=ais_hybrid&w=740&q=80');
-    background-attachment: fixed;
-    background-size: cover;
-  }
-
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    min-height: 100vh;
-    background: transparent;
-  }
-
-  /* Banner */
-  .banner {
-    height: 200px;
-    background: url('https://png.pngtree.com/thumb_back/fh260/background/20250528/pngtree-a-vibrant-cricket-stadium-at-dusk-featuring-colorful-flags-on-the-image_17350703.jpg') center/cover no-repeat;
-    width: 100%;
-  }
-
-  .layout {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 20px;
-    padding: 0 20px 40px;
-  }
-
-  /* Sidebar */
-  .sidebar {
-    margin-top: -60px;
-    background: var(--white);
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    padding: 25px 20px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  }
-
-  .avatar {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    margin: 0 auto 15px;
-    border: 5px solid var(--white);
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  .title-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    font-size: 20px;
-    font-weight: 800;
-  }
-
-  .verified-tick {
-    width: 18px;
-    height: 18px;
-    fill: #0088cc;
-  }
-
-  .handle {
-    color: #0088cc;
-    font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 20px;
-    display: block;
-    text-decoration: none;
-  }
-
-  /* Safe Stats for Meta Ads */
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-  .stat-card {
-    background: #f8fafc;
-    padding: 10px 2px;
-    border-radius: 10px;
-    border: 1px solid #edf2f7;
-  }
-  .stat-card b { display: block; font-size: 15px; font-weight: 800; color: var(--text-main); }
-  .stat-card span { font-size: 9px; color: var(--text-muted); text-transform: uppercase; font-weight: 700; }
-
-  /* Premium Button - Low Shadow */
-  .btn-join {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    background: linear-gradient(135deg, var(--primary-blue), var(--purple-mix));
-    color: #fff;
-    padding: 16px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 15px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-    border: none;
-    text-transform: uppercase;
-  }
-  .btn-join svg { width: 22px; height: 22px; fill: white; }
-
-  /* Content */
-  .main-content { padding-top: 30px; }
-  
-  .section-title {
-    font-size: 18px;
-    font-weight: 800;
-    margin-bottom: 15px;
-    border-left: 4px solid var(--purple-mix);
-    padding-left: 10px;
-  }
-
-  .grid-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
-    margin-bottom: 25px;
-  }
-
-  .card {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    height: 180px;
-    background: #000;
-  }
-  .card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
-  .card-label {
-    position: absolute;
-    bottom: 0; width: 100%;
-    background: rgba(0,0,0,0.8);
-    color: white;
-    padding: 10px;
-    font-size: 12px;
-    font-weight: 700;
-    text-align: center;
-  }
-
-  .about-box {
-    background: var(--white);
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-    font-size: 14px;
-    line-height: 1.6;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  }
-
-  /* Mobile FULL WIDTH */
-  @media (max-width: 768px) {
-    .layout { 
-      grid-template-columns: 1fr; 
-      padding: 0 10px 20px;
-    }
-    .sidebar { 
-      margin-top: -50px; 
-    }
-    .banner { height: 150px; }
-    .grid-cards { grid-template-columns: 1fr 1fr; }
-  }
+  :root { --p: #1e3a8a; --s: #7e22ce; --t: #0f172a; --m: #475569; --w: #fff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter', sans-serif; color:var(--t); background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 100%), url('https://img.freepik.com/free-vector/elegant-hand-painted-pastel-pink-alcohol-ink-background_1048-19138.jpg?w=740') center/cover fixed; }
+  .cnt { max-width:1000px; margin:0 auto; min-height:100vh; }
+  .bnr { height:220px; background:var(--p); width:100%; border-bottom:5px solid var(--s); }
+  .lay { display:grid; grid-template-columns:320px 1fr; gap:20px; padding:0 20px 40px; }
+  .side { margin-top:-80px; background:var(--w); border:1px solid #e2e8f0; border-radius:20px; padding:25px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.05); }
+  .avt { width:140px; height:140px; border-radius:50%; margin:0 auto 15px; border:6px solid var(--w); object-fit:cover; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
+  .ttl { display:flex; align-items:center; justify-content:center; gap:6px; font-size:22px; font-weight:800; }
+  .hnd { color:#0088cc; font-weight:600; font-size:14px; margin-bottom:20px; display:block; text-decoration:none; }
+  .sts { display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-bottom:20px; }
+  .stc { background:#f8fafc; padding:10px 2px; border-radius:10px; border:1px solid #edf2f7; }
+  .stc b { display:block; font-size:16px; font-weight:800; }
+  .stc span { font-size:9px; color:var(--m); text-transform:uppercase; font-weight:700; }
+  .btn { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; background:linear-gradient(135deg, var(--p), var(--s)); color:#fff; padding:18px; border-radius:12px; text-decoration:none; font-weight:800; font-size:15px; border:none; text-transform:uppercase; box-shadow:0 4px 0 rgba(0,0,0,0.1); }
+  .btn svg { width:22px; height:22px; fill:#fff; }
+  .main { padding-top:40px; }
+  .sttl { font-size:20px; font-weight:800; margin-bottom:15px; border-left:5px solid var(--s); padding-left:10px; }
+  .box { background:var(--w); padding:25px; border-radius:15px; border:1px solid #e2e8f0; font-size:15px; line-height:1.7; }
+  @media (max-width:768px) { .lay { grid-template-columns:1fr; padding:0 10px 20px; } .side { margin-top:-60px; } .bnr { height:150px; } }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="banner"></div>
+<div class="cnt">
+  <div class="bnr"></div>
 
-  <div class="layout">
-    <aside class="sidebar">
-      <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69d7dc041cc236.91777255_photo_2026-03-25_21-03-07.jpg" class="avatar" alt="Siya">
-      
-      <div class="title-area">
-        Cricket Queen Siya
-        <svg class="verified-tick" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.9 14.7L6 12.6l1.5-1.5 2.6 2.6 6.4-6.4 1.5 1.5-7.9 7.9z"/></svg>
+  <div class="lay">
+    <aside class="side">
+      <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69d7dc041cc236.91777255_photo_2026-03-25_21-03-07.jpg" class="avt" alt="Siya">
+      <div class="ttl">Cricket Queen Siya <svg style="width:20px; fill:#0088cc;" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.9 14.7L6 12.6l1.5-1.5 2.6 2.6 6.4-6.4 1.5 1.5-7.9 7.9z"/></svg></div>
+      <a href="#" class="hnd">Official Community</a>
+      <div class="sts">
+        <div class="stc"><b>225K+</b><span>Fans</span></div>
+        <div class="stc"><b>3000+</b><span>Posts</span></div>
+        <div class="stc"><b>96%</b><span>Expert</span></div>
       </div>
-      <a href="#" class="handle">Official Channel</a>
-
-      <div class="stats">
-        <div class="stat-card"><b>225K+</b><span>Fans</span></div>
-        <div class="stat-card"><b>3000+</b><span>Insights</span></div>
-        <div class="stat-card"><b>Expert</b><span>Analysis</span></div>
-      </div>
-
-      <a href="https://t.me/+kJ6E9E2W7U4zY2Q1" class="btn-join">
+      <a href="https://t.me/+kJ6E9E2W7U4zY2Q1" class="btn">
         <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.896-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-        ACCESS CHANNEL
+        JOIN OFFICIAL CHANNEL
       </a>
     </aside>
 
-    <main class="main-content">
-      <h2 class="section-title">Major League Coverage</h2>
-      <div class="grid-cards">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=400" alt="IPL">
-          <div class="card-label">Premier League Analysis</div>
-        </div>
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=400" alt="Stats">
-          <div class="card-label">Real-time Updates</div>
-        </div>
-      </div>
-
-      <h2 class="section-title">Channel Introduction</h2>
-      <div class="about-box">
+    <main class="main">
+      <h2 class="sttl">About Channel</h2>
+      <div class="box">
         <b>Welcome to Cricket Queen Siya's official channel!</b><br><br>
         Get access to premium cricket analysis, fastest session updates, and high-quality match insights. Siya covers all major leagues including IPL, BBL, PSL, and ICC tournaments. Join our professional community of 225,000+ members today and take your cricket experience to the next level.
       </div>
